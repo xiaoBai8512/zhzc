@@ -1,0 +1,395 @@
+@import "../var&mixin";
+@flowLeft: .6rem;
+@flowPaddingLeft: .6rem;
+.pro-cz{
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: @topHeight;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &.upScroll{
+        background-color: #fff;
+    }
+    .box-back{
+        width: 26px;
+        height: 26px;
+        margin-left: .2rem;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+    }
+    .icon-edit{
+        width: px2rem(42);
+        margin-right: px2rem(38);
+    }
+    .icon-back-detail{
+        fill: #5f5f5f;
+        margin-left: 3px;
+    }
+    .head-p-name{
+        display: inline-block;
+        width: 7rem;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+.bus-detail{
+    position: absolute;
+    right: px2rem(53);
+    bottom: px2rem(340);
+    .wh(93);
+    line-height: 1.2;
+    border-radius: 50%;
+    color: #cb8762;
+    background-color: #ffd798;
+    box-shadow: px2rem(5.3) px2rem(9.6) px2rem(21) 0 rgba(66, 66, 66, 0.27);
+}
+.box-tabs{
+    //position: sticky;
+    //position: -webkit-sticky;
+    top: 44px;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    z-index: 2;
+}
+//轮播图下产品信息
+.pro-content{
+    padding: px2rem(25);
+    .info-name{
+        font-size: 15px;
+        color: #404040;
+        line-height: 1.33;
+        margin-bottom: px2rem(25);
+    }
+    .info-item{
+        >div{
+            margin-bottom: px2rem(18);
+        }
+    }
+    .item-label{
+        display: inline-block;
+        min-width: px2rem(135);
+        margin-right: px2rem(30);
+        border: 1px solid #aaaaaa;
+        border-radius: px2rem(20);
+        text-align: center;
+        .font20;
+    }
+    .abs-ps{
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateY(-100%);
+    }
+}
+.pro-change-sp{
+    line-height: px2rem(101);
+    padding: 0 .333rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid @borderGray;
+}
+.pro-box-sp{
+    background-color: #fff;
+    .title{
+        line-height: px2rem(101);
+        color: #3e3e3e;
+        .h{
+            margin-right: .1rem;
+            height: px2rem(25);
+            width: px2rem(12);
+            border-radius: 6px;
+            background-color: @themeColor;
+        }
+    }
+    .content{
+        padding: 0 px2rem(41);
+        display: flex;
+        flex-wrap: wrap;
+        >div{
+            width: 33.33%;
+            flex: 1;
+        }
+        .item{
+            line-height: 1.3;
+            margin-bottom: px2rem(24);
+            width: px2rem(202);
+            height: px2rem(91);
+            background-color: #f3f3f3;
+            border-radius: px2rem(8);
+            .sp{
+                .font(24);
+                color: #626262;
+            }
+        }
+    }
+}
+
+//班期选择
+.sec-pro-detail-bq{
+    padding: .36rem .3rem;
+    &.bq-flex{
+        display: flex;
+        justify-content: space-between;
+    }
+    &.bq-float{
+        overflow: hidden;
+        .bq-item{
+            float: left;
+            margin-right: .12rem;
+        }
+    }
+    .bq-item{
+        >span{
+            line-height: 1.3;
+            &:first-child{
+                color: #b8b8b8;
+            }
+            &:last-child{
+                color: #404040;
+                .font20;
+            }
+        }
+    }
+    >div{
+        width: 1.4rem;
+        height: px2rem(80);
+        border: 1px solid #d2d2d2;
+        border-radius: px2rem(8rem);
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        >span{
+            display: block;
+        }
+    }
+}
+//店铺归属
+.sec-pro-detail-belong{
+    padding: px2rem(22) px2rem(26);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    >div{
+        display: flex;
+        align-items: center;
+    }
+    .img-head{
+        width: px2rem(64);
+        height: px2rem(64);
+        border-radius: 50%;
+        margin-right: px2rem(20);
+    }
+    .belong-name{
+        font-size: 15px;
+        color: #3f3f3f;
+        margin-right: px2rem(12);
+    }
+    .img-home{
+        .wh(71, 32);
+    }
+}
+//<!--产品所属店铺信息-->
+.proHeaderDiv{
+    position: relative;
+    margin-top: .25rem;
+    margin-bottom: .25rem;
+    height: px2rem(151);
+    background-color: white;
+    .proShopImage{
+        width: px2rem(72);
+        height: px2rem(72);
+        border-radius: px2rem(36);
+        margin: px2rem(27) auto px2rem(27) px2rem(48);
+    }
+    >span{
+        position: absolute;
+        left: px2rem(131);
+    }
+    .proSpanTitle{
+        top: px2rem(30);
+        font-size: px2rem(24);
+        color: #3f3f3f;
+    }
+    .proSpanNum{
+        bottom: px2rem(48);
+        font-size: px2rem(20);
+        color: #3f3f3f;
+    }
+    .proBref{
+        bottom: px2rem(18);
+        font-size: px2rem(20);
+        color: #b9b9b9;
+    }
+    .zhanweiSpan{
+        background-color: transparent;
+        left: 0px;
+        width: 75%;
+        height: px2rem(151);
+    }
+    .proAttentionButton{
+        position: absolute;
+        right: px2rem(45);
+        top: px2rem(55);
+        border-radius: 5px;
+        background-color: white;
+        border: solid 1px #707070;
+        color: #515151;
+        &.changeBGColor{
+            color: #ffa800;
+            border: solid 1px #ffa800;
+        }
+    }
+}
+
+.pro-detail-title{
+    padding: px2rem(35) 0;
+}
+//线路
+.pro-detail-xianlu{
+    padding: px2rem(25);
+    border-bottom: 1px solid @borderGray;
+}
+//显示隐藏
+.pro-detail-ani{
+    overflow: hidden;
+    will-change: height;
+    transition: height .3s;
+}
+//行程详情
+.content-flow{
+    padding: 0 @flowLeft;
+}
+.box-flow{
+    padding-bottom: @pl;
+    h3{
+        position: relative;
+        padding-left: @flowPaddingLeft;
+        margin-bottom: .2rem;
+        color: #3f3f3f;
+        .step-vertex{
+            position: absolute;
+            margin-left: -@flowPaddingLeft;
+            transform: translateX(-50%);
+            text-align: center;
+            >span{
+                display: block;
+            }
+            .dt{
+                font-size: 12px;
+                color: @themeColor;
+                transform: scale(.9);
+            }
+        }
+        .step-vertex-text{
+            svg{
+                margin-left: .1rem;
+                margin-right: .1rem;
+                vertical-align: middle;
+            }
+        }
+    }
+    .step-detail{
+        margin-bottom: .2rem;
+        padding-left: @flowPaddingLeft;
+        border-left: 1px solid @borderGray;
+        .step-detail-title{
+            color: #535353;
+            img{
+                //vertical-align: baseline;
+                .wh(24);
+                transform: translateY(-1px);
+                //width: px2rem(24);
+                //&.zs{
+                //    .wh(24);
+                //}
+                //&.cy{
+                //    .wh(17,24);
+                //    transform: translateY(-1px);
+                //}
+                //&.jd{
+                //    .wh(26)
+                //}
+            }
+        }
+        .step-detail-desc{
+            color: #adacac;
+        }
+        >div{
+            margin-bottom: .2rem;
+        }
+        .coll-x{
+            .coll(6)
+        }
+    }
+
+    .step-qf{
+        margin-bottom: .3rem;
+    }
+    .qf{
+        padding: .05rem;
+        .wh(60);
+    }
+    .qf-item{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .left{
+            margin-right: .6rem;
+        }
+        .qf-type{
+            margin-left: .6rem;
+        }
+        .remark{
+            flex: 1;
+        }
+    }
+}
+//----
+.sec-pro-detail-bottom{
+    .box-btn-go{
+        padding: px2rem(44) 0;
+        >button{
+            margin-left: auto;
+            margin-right: auto;
+            padding: .15rem px2rem(35);
+            border: 1px solid @borderGray;
+            border-radius: px2rem(30);
+            display: flex;
+            align-items: center;
+            background-color: #fff;
+            line-height: 1;
+        }
+    }
+    .box-bottom-link{
+        border: 1px solid @borderGray;
+        display: flex;
+        >span{
+            flex: 1;
+            text-align: center;
+            color: @fontGray;
+            line-height: 1rem;
+            &:first-child{
+                border-right: 1px solid @borderGray;
+            }
+        }
+    }
+    .box-bottom-logo{
+        padding-top: px2rem(58);
+        padding-bottom: px2rem(23);
+        text-align: center;
+        color: @fontGray;
+        >img{
+            width: px2rem(65);
+            margin-bottom: px2rem(18);
+        }
+    }
+}

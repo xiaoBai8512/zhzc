@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="/static/ico/favicon.ico">
+    <title>三师汇</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script>
+        if (document.URL.indexOf('index.html?t=') < 0) {
+            var timestamp = (new Date()).valueOf();
+            window.location.href = '/index.html?t=' + timestamp + location.hash;
+        }
+        // 设置根字体大小
+        function refreshRem() {
+            var root = document.documentElement;
+            var width = root.clientWidth;
+            root.style.fontSize = width > 640 ? '64px' : width / 10 + 'px';
+        }
+        // 函数节流
+        function throttle(handler, delay) {
+            var timer = null;
+            return function () {
+                if (timer) {
+                    clearTimeout(timer);
+                }
+                timer = setTimeout(handler, delay);
+            }
+        }
+        window.addEventListener('resize', throttle(refreshRem, 200));
+        refreshRem();
+    </script>
+</head>
+<body style="font-size: 13px;">
+<div id="app"></div>
+<script src="/static/xhr.js"></script>
+<script>
+    onerror = function (msg, source, line, col, error) {
+        if(msg == 'Script error.' && !source) return false;
+        setTimeout(function () {
+            console.log(msg, source, line)
+            console.log(col)
+            console.log(error)
+            var errObj = {
+                type: 0,
+                code: 1,
+                content: ['msg: '+msg, 'source: '+source, 'error: '+JSON.stringify(error)].join('=>')
+            }
+            pulldata('/reportlog', errObj)
+        },0)
+        return false
+    }
+</script>
+<!-- built files will be auto injected -->
+<!-- version -->
+</body>
+</html>

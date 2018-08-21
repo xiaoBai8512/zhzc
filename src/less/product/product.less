@@ -1,0 +1,62 @@
+@import "../var&mixin";
+.product{
+    .sec-pro-limit{
+        display: flex;
+        overflow-x: scroll;
+        >div{
+            min-width: 28%;
+            margin-right: .2rem;
+        }
+    }
+
+
+    .sec-pro{
+        padding: 0 @pl;
+    }
+    .box-pro{
+        padding: .2rem 0;
+        overflow: hidden;
+        border-bottom: 1px solid;
+    }
+
+    .box-img-info{
+        float: left;
+        margin-right: .2rem;
+        width: 2rem;
+    }
+
+}
+.gpsTisi{
+    p{
+        text-align: center;
+        font-family: PingFangSC;
+        font-size: px2rem(26);
+        padding:px2rem(88) 0 px2rem(73);
+        line-height: 1.35;
+        text-align: center;
+        color: #3a3a3a;
+    }
+    button{
+        width: px2rem(287);
+        height: px2rem(76);
+        border-radius: px2rem(38);
+        background-color: #ffffff;
+        border: solid 2px #ffa800;
+        font-size: px2rem(30);
+        line-height: 1.17;
+        text-align: center;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        color: #ffa800;
+        &.jixu{
+            color: #bfbfbf;
+            border: solid 2px #bfbfbf;
+            margin: px2rem(53);
+        }
+    }
+    &.dialog-demo .img-box{
+        height: px2rem(504);
+    }
+
+}

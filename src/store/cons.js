@@ -1,0 +1,15 @@
+const LOCATION = 'LOCATION'
+const ACTIONSHEET = 'ACTIONSHEET'
+const VERSION = 'VERSION'
+const PROMPT = 'PROMPT'
+const LOADER = 'LOADER'
+const RESTATE = 'RESTATE'
+
+export {
+    LOCATION,
+    ACTIONSHEET,
+    VERSION,
+    PROMPT,
+    LOADER,
+    RESTATE
+}

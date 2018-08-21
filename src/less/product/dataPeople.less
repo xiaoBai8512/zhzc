@@ -1,0 +1,129 @@
+@import "../var&mixin";
+.data-people{
+    .box-tab{
+        border-bottom: 1px solid @borderGray;
+        position: relative;
+        //width: px2rem(150*7);
+        background-color: #fff;
+        overflow-x: scroll;
+        display: flex;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+    }
+    //月份选择
+    .item-month{
+        flex: none;
+        width: px2rem(150);
+        height: px2rem(96);
+        float: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        color: @fontGray;
+        &.active{
+            .item-month-de{
+                color: @themeColor;
+            }
+            .item-month-price{
+                color: #404040;
+            }
+        }
+        .item-month-de{
+            line-height: 1;
+            margin-top: .25rem;
+        }
+        .item-month-price{
+            margin-bottom: .05rem;
+            line-height: 1;
+            .font20;
+        }
+        .border-b{
+            display: inline-block;
+            width: .8rem;
+            height: 2px;
+            background-color: @themeColor;
+        }
+        .borderTm{
+            background-color: transparent;
+        }
+    }
+    //线路选择
+    .content-xl{
+        padding: px2rem(29) px2rem(42) px2rem(25);
+        background-color: #fff;
+        .item-xl{
+            margin-right: px2rem(43);
+            display: inline-block;
+            >p{
+                margin-top: .1rem;
+                padding: 0 .1rem;
+                line-height: 1.2;
+                .font22;
+            }
+        }
+    }
+    .sec-pz{
+        >div:not(:last-child){
+            border-bottom: 1px solid @borderGray;
+        }
+        .box-check-ye{
+            padding: px2rem(25) px2rem(40);
+            display: flex;
+            align-items: center;
+
+            .check-ps{
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    //成人 儿童 选票
+    .content-mans-item{
+        padding-left: px2rem(40);
+        padding-right: px2rem(35);
+        height: px2rem(114);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #fff;
+        //>span{
+        //    font-size: 15px;
+        //}
+    }
+    .box-radio-img{
+        .wh(42);
+        background-color: @mainColor;
+        border-radius: px2rem(10);
+        img{
+            .wh(31,21)
+        }
+    }
+    .content-rooms{
+        padding-left: px2rem(44);
+        padding-right: 1rem;
+        padding-bottom: px2rem(30);
+        .bl_room{
+            transform: translateY(-40%);
+            color: #bebebe;
+        }
+    }
+
+    //注意事项
+    .content-ps{
+        padding: px2rem(23) px2rem(44);
+        background-color: #fff;
+        border-top: 1px solid @borderGray;
+        h5{
+            font-size: 13px;
+            margin-bottom: .1rem;
+        }
+        >p{
+            color: @fontGray;
+            line-height: 1.2;
+        }
+    }
+}

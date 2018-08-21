@@ -1,0 +1,209 @@
+@import "../var&mixin";
+.sec-home-top{
+    padding-top: px2rem(23);
+    .shop-info{
+        padding: @pl;
+        >img{
+            margin-right: px2rem(27);
+            .wh(116);
+            border-radius: 50%;
+        }
+        span{
+            vertical-align: middle;
+        }
+        .shop-name{
+            font-size: 15px;
+        }
+        .icon-dp{
+            .wh(71, 32)
+        }
+    }
+}
+.search-holder{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%);
+    color: #fff;
+    >img{
+        .wh(24);
+    }
+    >span{
+        line-height: px2rem(54);
+        vertical-align: middle;
+    }
+}
+.box-search{
+    position: relative;
+    padding: 0 @pl px2rem(23);
+    input{
+        box-sizing: border-box;
+        padding-left: .8rem;
+        width: 100%;
+        height: px2rem(54);
+        border-radius: .133rem;
+        border: 1px solid @borderGray;
+    }
+}
+
+.sec-home-destination{
+    padding: px2rem(56) px2rem(30) px2rem(45);
+    min-height: 4.1rem;
+    overflow: hidden;
+    line-height: 1;
+    font-size: 0;
+}
+.item-home-destination{
+    width: 20%;
+    display: inline-block;
+    text-align: center;
+    .font26;
+    >div{
+        display: inline-flex;
+        align-items: flex-end;
+        justify-content: center;
+        .wh(73);
+        border-radius: 50%;
+    }
+    >span{
+        display: block;
+        margin-top: px2rem(22);
+    }
+    &.floor-one{
+        margin-bottom: px2rem(60);
+    }
+    &:nth-child(1){
+        div{
+            background-color: rgba(255,168,0,.23);
+        }
+        //img{
+        //    .wh(73);
+        //}
+    }
+    &:nth-child(2){
+        div{
+            background-color: rgba(83,162,244,.23);
+        }
+        //img{
+        //    .wh(61, 77);
+        //}
+    }
+    &:nth-child(3){
+        div{
+            background-color: rgba(222,75,171,.23);
+        }
+        //img{
+        //    .wh(73);
+        //}
+    }
+    &:nth-child(4){
+        div{
+            background-color: rgba(234,149,132,.23);
+        }
+        //img{
+        //    .wh(61, 77);
+        //}
+    }
+    &:nth-child(5){
+        div{
+            background-color: rgba(238,84,76,.23);
+        }
+        //img{
+        //    .wh(73);
+        //}
+    }
+    &:nth-child(6){
+        div{
+            background-color: rgba(240,95,76,.47);
+        }
+        //img{
+        //    .wh(61, 77);
+        //}
+    }
+    &:nth-child(7){
+        div{
+            background-color: rgba(254,179,0,.43);
+        }
+        //img{
+        //    .wh(73);
+        //}
+    }
+    &:nth-child(8){
+        div{
+            background-color: rgba(88,159,244,.59);
+        }
+        //img{
+        //    .wh(61, 77);
+        //}
+    }
+    &:nth-child(9){
+        div{
+            background-color: rgba(32,217,0,.41);
+        }
+        //img{
+        //    .wh(73);
+        //}
+    }
+    &:nth-child(10){
+        div{
+            background-color: rgba(90,158,243,.47);
+        }
+        //img{
+        //    .wh(61, 77);
+        //}
+    }
+}
+//产品列表
+.sec-home-pro{
+    padding: .2rem @pl;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background-color: @mainColor;
+}
+.sec-home-pro-item{
+    flex: none;
+    width: px2rem(344);
+    margin-bottom: .2rem;
+    background: #fff;
+    .item-pro-img{
+        position: relative;
+        img{
+            width: 100%;
+            height: px2rem(226);
+        }
+        span{
+            padding: 1px px2rem(20);
+            position: absolute;
+            bottom: 0px;
+            transform: translate(.22rem, 50%);
+            border-radius: px2rem(20);
+            color: #fff;
+            background: linear-gradient(90deg, #ffa800, #ff4800);
+        }
+    }
+    .item-pro-name{
+        padding: 0 .2rem;
+        margin-top: px2rem(30);
+        line-height: 1.3;
+        color: #4e4e4e;
+        text-align: justify;
+    }
+    .item-pro-price{
+        padding: .15rem .2rem;
+        .font26;
+        color: #1e1e1e;
+    }
+}
+.shuxianDiv{
+    background-color: #b6b4b4;
+    width: 1px;
+    height: px2rem(52);
+    position: absolute;
+    left: px2rem(560);
+    top: px2rem(20);
+}
+.fenleiImg{
+    width: px2rem(23);
+    height: px2rem(16);
+}

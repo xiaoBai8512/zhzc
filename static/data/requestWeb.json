@@ -1,0 +1,11 @@
+{
+    "code": 200,
+    "data": {
+        "responseJsLocation": {
+            "data": {
+                "longitude": 116.50028,
+                "latitude": 39.977331
+            }
+        }
+    }
+}
